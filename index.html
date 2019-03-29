@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <title>Soccer</title>
 </head>
 <body>
-    <div class="container">
-        <form id="animal-form">
-            <label for="animal-input">Add an animal</label><br>
-            <input type="text" id="animal-input"><br>
+    <h1>Soccer Search</h1>
+    <!-- Disply buttons -->
+    <div id="button-view"></div>
 
-        <input type="submit" id="animal-search" value="animal search"> 
+    <!-- text box and search button -->
+    <form id="soccer-form">
+            <label id="add-guide">Add soccer players</label><br>
+            <input type="text" id="soccer-input"><br>
 
-        </form>
+        <input type="submit" id="soccer-search" value="search">           
+        
+    </form>
+    
+    <!-- Disply gifs -->
+<div id="content-view"></div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="assets/app.js"></script>
 
 
 
-
-    </div>
+    
 
 </body>
 </html>
