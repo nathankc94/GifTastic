@@ -1,5 +1,14 @@
 body {
-    background-color: aqua;
+    background-color: #001e6b;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    
+  }
+
+
+p,
+img {
+    margin: 10px;
+    float: left;
 }
 
 button,
