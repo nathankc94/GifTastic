@@ -9,12 +9,15 @@ p,
 img {
     margin: 10px;
     float: left;
+    font-family: 'Luckiest Guy', cursive;
 }
-
+h1,
 button,
 div,  
 form,  
-input, 
-label {      
+input {      
     margin: 10px;  
+    font-family: 'Luckiest Guy', cursive;
 }
+.soccer-btn,
+.pointer {cursor: pointer;}
