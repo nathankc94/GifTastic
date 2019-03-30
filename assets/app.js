@@ -33,15 +33,16 @@ $(document).on("click", ".soccer-btn", function () {
         for (var j = 0; j < result.length; j++) {
             var still = result[j].images.fixed_height_still.url;
             var animatedGif = result[j].images.fixed_height.url;
+            // add rating  and title
+            var rating = $("<p>").text(result[j].rating).addClass("rtn");
+            var titleP = $("<p>").text(result[j].title);
+            $('#content-view').prepend(titleP, rating);
             // disply the initial gif once clicked on button (still gif)
             // add data status and set it to still
             var gifImage = $('<img>').attr("src", still).attr('data-animate', animatedGif).attr('data-still', still).attr('data-state', 'still');
             $('#content-view').prepend(gifImage);
             // once click on a gif make it so it changes from still to animated
             gifImage.on('click', activateGif);
-            // add rating
-            var rating = $("<p>").text(result[j].rating);
-            $('#content-view').prepend(rating);
         }
     });
 
@@ -50,10 +51,10 @@ $(document).on("click", ".soccer-btn", function () {
         var state = $(this).attr('data-state');
         
         if (state === 'still') {
-            $(this).attr('src', $(this).data('animate'));
+            $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr('data-state', 'animate');
         } else {
-            $(this).attr('src', $(this).data('still'));
+            $(this).attr("src", $(this).attr("data-still"));
             $(this).attr('data-state', 'still');
         }
     }
@@ -63,11 +64,11 @@ $(document).on("click", ".soccer-btn", function () {
 
 // capture text from user input and push into topics array
 $("#soccer-search").on("click", function (event) {
-
+    
     event.preventDefault();
-
     var soccer = $("#soccer-input").val().trim();
     topics.push(soccer);
-
+    
+    $("#soccer-input").val('');
     createButtons();
 });
